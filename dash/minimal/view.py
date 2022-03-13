@@ -1,12 +1,12 @@
 """Dash App Layout"""
-from dash import dcc, html, dash_table
+from dash import dcc, html, callback, dash_table
 from dash.dependencies import Input, Output, State
 
 layout = html.Div([
     
 ], style={'paddingLeft': '40px', 'paddingRight': '40px'},)
 
-@app.callback(
+@callback(
     Output('grouprun_output', 'children'),
     Input('submit-button-state', 'n_clicks'),
     State('grouprun_id', 'value'),

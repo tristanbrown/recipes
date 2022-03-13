@@ -1,12 +1,13 @@
 import os
 import dash
 
-from . import view
+import layout
+import callbacks
 
 app = dash.Dash()
 
 ## Create Main View
-app.layout = view.layout
+app.layout = layout.layout
 
 def run():
     app.run_server(port=8888, host='0.0.0.0', debug=True)
